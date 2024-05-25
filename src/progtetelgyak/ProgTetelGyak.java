@@ -10,6 +10,8 @@ public class ProgTetelGyak {
        
         osszegzes();
         kiir();
+        megszamlalas();
+        kiir();
     }
 
    
@@ -23,5 +25,14 @@ public class ProgTetelGyak {
     private static void kiir() {
         System.out.printf("A tomb elemeinek osszege: %d\n", osszeg );    
     }
+
+    private static void megszamlalas() {
+       osszeg = 0;
+        for (int i = 0; i < sorozat.length; i++) {
+            if (sorozat[i] % 4 == 0) {
+                osszeg++;
+            }
+    }
     
+}
 }
