@@ -11,7 +11,7 @@ public class ProgTetelGyak {
         osszegzes();
         kiir();
         megszamlalas();
-        kiir();
+        kiir2();
     }
 
    
@@ -35,4 +35,8 @@ public class ProgTetelGyak {
     }
     
 }
+
+    private static void kiir2() {
+        System.out.printf("A néggyel osztható számok darabszáma: %d\n", osszeg);    
+    }
 }
