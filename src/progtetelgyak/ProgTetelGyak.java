@@ -16,6 +16,9 @@ public class ProgTetelGyak {
         megszamlalas();
         maximumKivalasztas();
         minimumKivalasztas();
+        kivalasztas();
+        eldontes_1_vanLegalabbEgy();
+        eldontes_2_mind();
     }
 
    
@@ -68,4 +71,40 @@ public class ProgTetelGyak {
         System.out.print(eredmeny);    
     }
 
+    private static void kivalasztas() {
+        int keresett=12;
+        int i=0;
+        
+    }
+    
+     private static void eldontes_1_vanLegalabbEgy() {
+        int N = sorozat.length;
+        int ker = 43;
+        int i = 0;
+        while(i < N && !(sorozat[i] > ker)){
+            i++;
+        }
+        boolean valasz = i < N;  
+        int minIndex = i;
+        
+        if(valasz==true){
+        kiir("A keresett elem helye: " + minIndex + "\n");
+        } else {
+        kiir("Nincs benne a keresett elem");
+        }
+    }
+     private static void eldontes_2_mind() {
+        int N = sorozat.length;
+        int ker = -10;
+        int i = 0;
+        while(i < N && (sorozat[i] > ker)){
+            i++;
+        }
+        boolean valasz = i >= N;  
+         if (valasz==false){
+        kiir("Az összes elem egyezik\n");
+        } else {
+        kiir("Nem azonos az összes");
+        }
+    }
 }
