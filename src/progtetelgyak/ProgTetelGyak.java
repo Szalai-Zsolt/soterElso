@@ -11,6 +11,7 @@ public class ProgTetelGyak {
         osszegzes();
         megszamlalas();
         maximumKivalasztas();
+        minimumKivalasztas();
     }
 
    
@@ -19,7 +20,7 @@ public class ProgTetelGyak {
         for (int i = 0; i < sorozat.length; i++) {
             osszeg += sorozat[i];
         }
-         kiir("a sorozat Ă¶sszege: " + osszeg + "\n\n");
+         kiir("a sorozat Összege: " + osszeg + "\n\n");
     }
 
 
@@ -48,6 +49,18 @@ public class ProgTetelGyak {
         kiir("a sorozat legnagyobb eleme: " + sorozat[maxIndex] + "\n\n");
     }
 
+    private static void minimumKivalasztas() {
+        
+        int minIndex = 0;
+        for (int i = 1; i < sorozat.length; i++) {
+            if(sorozat[i] < sorozat[minIndex]){
+                minIndex = i;
+            }
+        }
+        kiir("a legkisebb elem helye: " + minIndex + "\n");
+        kiir("a sorozat legkisebb eleme: " + sorozat[minIndex] + "\n\n");
+    }
+    
     private static void kiir(String eredmeny) {
         System.out.print(eredmeny);    
     }
