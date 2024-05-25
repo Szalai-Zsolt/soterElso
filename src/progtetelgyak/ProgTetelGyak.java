@@ -9,9 +9,8 @@ public class ProgTetelGyak {
     public static void main(String[] args) {
        
         osszegzes();
-        kiir();
         megszamlalas();
-        kiir2();
+        maximumKivalasztas();
     }
 
    
@@ -20,11 +19,9 @@ public class ProgTetelGyak {
         for (int i = 0; i < sorozat.length; i++) {
             osszeg += sorozat[i];
         }
+         kiir("a sorozat Ă¶sszege: " + osszeg + "\n\n");
     }
 
-    private static void kiir() {
-        System.out.printf("A tomb elemeinek osszege: %d\n", osszeg );    
-    }
 
     private static void megszamlalas() {
        osszeg = 0;
@@ -32,11 +29,26 @@ public class ProgTetelGyak {
             if (sorozat[i] % 4 == 0) {
                 osszeg++;
             }
+        
     }
-    
+    kiir("A néggyel osztható számok darabszáma: " + osszeg + "\n\n");
 }
 
-    private static void kiir2() {
-        System.out.printf("A néggyel osztható számok darabszáma: %d\n", osszeg);    
+    private static void maximumKivalasztas() {
+       int maxIndex = 0;
+        for (int i = 1; i < sorozat.length; i++) {
+            //if(sorozat[i] > maxErtek){
+                //maxErtek = sorozat[i];
+            if(sorozat[i] > sorozat[maxIndex]){
+                maxIndex = i;
+            }
+      
+        }
+        kiir("a legnagyobb elem helye: " + maxIndex + "\n");
+        kiir("a sorozat legnagyobb eleme: " + sorozat[maxIndex] + "\n\n");
+    }
+
+    private static void kiir(String eredmeny) {
+        System.out.print(eredmeny);    
     }
 }
